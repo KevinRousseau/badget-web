@@ -9,6 +9,28 @@
 
 		moveClouds();
 
+		carousel();
+
+		smallChanges();
+
+	}
+
+	function smallChanges(){
+
+		$('button').addClass('hidden');
+
+	}
+
+	function carousel(){
+
+		$('.carousel').slick({
+			lazyLoad: 'ondemand',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+	    	autoplay: true,
+			autoplaySpeed: 3000,
+		});
+
 	}
 
 	function moveClouds(){

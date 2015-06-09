@@ -7,12 +7,18 @@ fallback.load({
 		'http://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js',
 		'js/vendor/snap.svg/dist/snap.svg-min.js'
 	],
-	Lazysizes: [
+	lazysizes: [
 		'js/vendor/lazysizes/lazysizes.min.js'
+	],
+	slick: [
+
+		'js/vendor/slick.js/slick/slick.min.js'
 	],
 	'app.js': 'js/app.js'
 },{
 	shim: {
-		'app.js': ['jQuery', 'Snap']
+		'slick': ['jQuery'],
+		'Snap': ['jQuery'],
+		'app.js': ['Snap']
 	}
 })
