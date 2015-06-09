@@ -3,7 +3,7 @@
 
 body {
 	font-size: 62.5%;
-	background-image: url('../assets/bg/pattern.png');
+	background-image: url('../assets/img/bg/pattern.png');
 }
 
 .container {
@@ -12,12 +12,60 @@ body {
 
 .header{
 	overflow-x: auto;
-	//position :relative;
-	//animation: mymove 2s infinite;
-    //animation-timing-function: linear;
+	background-image: url('../assets/img/bg/road.svg');
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-size: 31px;
+}
+
+.around-info {
+	height: 54em;
+	margin-top: -1px;
+	padding-top: 8em;
+	padding-bottom: 9em;
+	background-image: url('../assets/img/bg/yellow-road.png'),
+						url('../assets/img/bg/yellow-pattern.png'), ;
+	color: #fff;
+	border-bottom: 3px solid #000;
+}
+
+.info-text {
+	@include box-sizing(border-box);
+
+	h1{
+		font-family: $font-dosis;
+		font-size: 5.5em;
+	}
+
+	p {
+		border-top: 3px solid #000;
+		padding-top: 1.5em;
+		margin-top: 1.5em;
+		font-family: $font-regular;
+		font-size: 2.1em;
+		line-height: 1.6em;
+		width: 24.5em;
+	}
+
+	span {
+		font-family: $font-demi-bold;
+		color: #000;
+		background-image: url('../assets/img/bg/pattern.png');
+	}
+
+	img {
+		width: 228px;
+		margin-top: 2.5em;
+	}
+
 }
 
 
+
+//on header
+//position :relative;
+//animation: mymove 2s infinite;
+//animation-timing-function: linear;
 /*@keyframes mymove{
     0%   {left: 0px;}
     25%  {left: -50px;}

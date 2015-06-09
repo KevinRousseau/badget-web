@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'dosis_semibold';
+    src: url('dosis_semibold/dosis-semibold-webfont.eot');
+    src: url('dosis_semibold/dosis-semibold-webfont.eot#iefix') format('embedded-opentype'),
+         url('dosis_semibold/dosis-semibold-webfont.woff2') format('woff2'),
+         url('dosis_semibold/dosis-semibold-webfont.woff') format('woff'),
+         url('dosis_semibold/dosis-semibold-webfont.ttf') format('truetype'),
+         url('dosis_semibold/dosis-semibold-webfont.svg#din_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avenir_bold';
+    src: url('avenir_bold/AvenirNext-Bold.eot');
+    src: url('avenir_bold/AvenirNext-Bold.eot#iefix') format('embedded-opentype'),
+         url('avenir_bold/AvenirNext-Bold.woff2') format('woff2'),
+         url('avenir_bold/AvenirNext-Bold.woff') format('woff'),
+         url('avenir_bold/AvenirNext-Bold.ttf') format('truetype'),
+         url('avenir_bold/AvenirNext-Bold.svg#din_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avenir_demi_bold';
+    src: url('avenir_demi_bold/AvenirNext-DemiBold.eot');
+    src: url('avenir_demi_bold/AvenirNext-DemiBold.eot#iefix') format('embedded-opentype'),
+         url('avenir_demi_bold/AvenirNext-DemiBold.woff2') format('woff2'),
+         url('avenir_demi_bold/AvenirNext-DemiBold.woff') format('woff'),
+         url('avenir_demi_bold/AvenirNext-DemiBold.ttf') format('truetype'),
+         url('avenir_demi_bold/AvenirNext-DemiBold.svg#din_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avenir_regular';
+    src: url('avenir_regular/AvenirNext-Regular.eot');
+    src: url('avenir_regular/AvenirNext-Regular.eot#iefix') format('embedded-opentype'),
+         url('avenir_regular/AvenirNext-Regular.woff2') format('woff2'),
+         url('avenir_regular/AvenirNext-Regular.woff') format('woff'),
+         url('avenir_regular/AvenirNext-Regular.ttf') format('truetype'),
+         url('avenir_regular/AvenirNext-Regular.svg#din_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

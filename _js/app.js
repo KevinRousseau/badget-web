@@ -18,8 +18,10 @@
 
 		clouds.transform('t200, 0');
 
+		clouds.removeClass('hidden');
+
 		clouds.animate(
-			{ transform: 't5000,0' },
+			{ transform: 't4000,0' },
 			200000,
 			function(){
 				clouds.attr(
@@ -27,7 +29,8 @@
 				);
 
 				moveClouds();
-			});
+			}
+		);
 	}
 
 
