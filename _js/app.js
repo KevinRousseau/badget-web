@@ -13,6 +13,26 @@
 
 		smallChanges();
 
+		videoSize();
+
+	}
+
+	function videoSize(){
+
+		var video = $('iframe');
+
+		var width = video.width(),
+			height = (width/16)*9;
+
+		video.height(height);
+
+
+		$(window).resize(function() {
+
+			videoSize();
+
+		});
+
 	}
 
 	function smallChanges(){

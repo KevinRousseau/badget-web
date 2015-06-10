@@ -1,5 +1,7 @@
 @import 'base';
-//@import '_login.scss';
+@import '_intro.scss';
+@import '_video.scss';
+@import '_queries-intro.scss';
 
 body {
 	font-size: 62.5%;
@@ -18,151 +20,59 @@ body {
 	background-size: 3.1em;
 }
 
-.around-info {
-	//height: 54em;
-	margin-top: -0.1em;
-	padding-top: 9em;
-	padding-bottom: 8em;
-	background-image: url('../assets/img/bg/yellow-road.png'),
-						url('../assets/img/bg/yellow-pattern.png');
-	color: #fff;
+text {
+	font-family: $font-dosis;
+}
+
+.around-numbers {
+	background-image: url('../assets/img/bg/numbers-road.png'), url('../assets/img/bg/yellow-pattern.png');
 	border-bottom: 3px solid #000;
+
+	section img {
+		position: absolute;
+		margin-left: -70px;
+		margin-top: -30px;
+	}
+
+	.first {
+		padding-top: 5em;
+	}
+
+	.second {
+		padding-top: 15em;
+	}
+
+	.third {
+		padding-top: 25em;
+		padding-bottom: 4em;
+	}
 }
 
-.info-text {
+.box {
+	background-image: url('../assets/img/bg/pattern.png');
+	border: 3px solid #000;
 	@include box-sizing(border-box);
-	margin-top: -1.5em;
-
-	h1{
-		font-family: $font-dosis;
-		font-size: 5.5em;
-		margin-bottom: 0.4em;
-		line-height: 1.1em;
-	}
-
-	.line {
-		height: 3px;
-		background-color: #000;
-	}
-
-	p {
-		margin-top: 1.5em;
-		font-family: $font-regular;
-		font-size: 2.1em;
-		line-height: 1.6em;
-	}
-
-	span {
-		font-family: $font-demi-bold;
-		color: #000;
-		background-image: url('../assets/img/bg/pattern.png');
-	}
-
-	img {
-		width: 22.8em;
-		margin-top: 2.8em;
-		transition: all 0.2s ease-in-out;
-	}
-
-	img:hover {
-		transform: scale(1.04);
-	}
-
-}
-
-.mockup {
-	@include box-sizing(border-box);
-}
-
-.back-iphone {
-	margin-left: 22em;
-}
-
-.front-iphone {
-	@include box-sizing(border-box);
-	padding-left: 6em;
-	margin-top: -36.5em;
-}
-
-.carousel {
-	width: 15em;
-	margin-top: -33.8em;
-	margin-left: 2.5em;
-}
-
-@media only screen
-	and(max-width: 1200px) {
-
-		.around-info {
-			background-image: url('../assets/img/bg/yellow-road-md.png'),
-								url('../assets/img/bg/yellow-pattern.png');
-			height: 55em;
-			background-position: left
-		}
+	padding: 10px;
+	height: 25em;
 }
 
 @media only screen
 	and(max-width: 992px) {
 
-	.around-info {
-		background-image: url('../assets/img/bg/yellow-road-sm.png'),
-								url('../assets/img/bg/yellow-pattern.png');
-		height: auto;
-	}
+	.around-numbers {
+		background-image: url('../assets/img/bg/yellow-pattern.png');
 
-	h1, p {
-		text-align: center;
-	}
+		.first{
+			padding-top: 6em;
+		}
 
-	p {
-		margin-left: 120px;
-	}
+		.second {
+			padding-top: 8em;
+		}
 
-	a {
-		margin-left: 245px;
-	}
-
-	.mockup {
-		padding-top: 8em;
-		margin-left: 13em;
-		padding-bottom: 6em;
-	}
-
-	.line {
-		margin-left: 120px;
-	}
-
-}
-
-@media only screen
-	and(max-width: 765px) {
-
-	.around-info {
-		background-image: url('../assets/img/bg/yellow-road-xs.png'),
-							url('../assets/img/bg/yellow-pattern.png');
-	}
-
-	.mockup {
-		margin-left: -30px;
-	}
-
-	h1 {
-		margin-left: 0px;
-	}
-
-	p {
-		margin-left: 65px;
-	}
-
-	a {
-		margin-left: 0px;
-
-		img {
-			margin-left: 80px;
+		.third {
+			padding-top: 8em;
 		}
 	}
-
-	.line {
-		margin-left: 65px;
-	}
 }
+
