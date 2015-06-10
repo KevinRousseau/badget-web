@@ -1,19 +1,41 @@
 (function(){
 
-	var svgArea = Snap('.intro-svg');
+	var svgArea1 = Snap('.intro-svg');
+	var svgArea2 = Snap('.outro-svg');
 
 
 	function init(){
 
 		rotateRad();
 
-		moveClouds();
+		clouds();
 
-		carousel();
+		carousel($('.carousel'));
+
+		carousel($('.carousel-footer'));
 
 		smallChanges();
 
 		videoSize();
+
+		//getData();
+
+	}
+
+	function getData(){
+
+		//TODO
+		//invullen aantal personen die challenge hebben gespeeld per challenge
+
+		$.ajax({
+			url: "http://student.howest.be/toon.bertier/20142015/MA4/BADGET/api/challenges/1",
+			type: 'GET',
+			dataType: 'json',
+			success: function(data){
+				console.log(data);
+			}
+
+		});
 
 	}
 
@@ -41,9 +63,9 @@
 
 	}
 
-	function carousel(){
+	function carousel(element){
 
-		$('.carousel').slick({
+		element.slick({
 			lazyLoad: 'ondemand',
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -53,24 +75,36 @@
 
 	}
 
-	function moveClouds(){
+	function clouds(){
 
-		var clouds = svgArea.select('#wolken_20'),
-		cloudBbox = clouds.getBBox();
+		var clouds1 = svgArea1.select('#wolken_1'),
+		cloudBbox1 = clouds1.getBBox();
 
-		clouds.transform('t200, 0');
+		var clouds2 = svgArea2.select('#wolken_2'),
+		cloudBbox2 = clouds2.getBBox();
 
-		clouds.removeClass('hidden');
+		moveClouds(clouds1, cloudBbox1);
 
-		clouds.animate(
+		moveClouds(clouds2, cloudBbox2);
+
+
+	}
+
+	function moveClouds(cloud, cloudBox){
+
+		cloud.transform('t200, 0');
+
+		cloud.removeClass('hidden');
+
+		cloud.animate(
 			{ transform: 't4000,0' },
 			200000,
 			function(){
 				clouds.attr(
-					{ transform: 'position(0 ' + cloudBbox.x + ' ' + cloudBbox.y + ')' }
+					{ transform: 'position(0 ' + cloudBox.x + ' ' + cloudBox.y + ')' }
 				);
 
-				moveClouds();
+				clouds();
 			}
 		);
 	}
@@ -78,7 +112,7 @@
 
 	function rotateRad(){
 
-		var rad = svgArea.select('#rad'),
+		var rad = svgArea1.select('#rad'),
 		radBbox = rad.getBBox();
 
 		rad.animate(

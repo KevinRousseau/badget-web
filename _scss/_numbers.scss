@@ -1,0 +1,93 @@
+.around-numbers {
+	background-image: url('../assets/img/bg/numbers-road.png'), url('../assets/img/bg/yellow-pattern.png');
+	border-bottom: 3px solid #000;
+
+	section img {
+		position: absolute;
+		margin-left: -70px;
+		margin-top: -30px;
+	}
+
+	.first {
+		padding-top: 5em;
+	}
+
+	.second {
+		padding-top: 15em;
+	}
+
+	.third {
+		padding-top: 25em;
+		padding-bottom: 4em;
+	}
+}
+
+.box {
+	background-image: url('../assets/img/bg/pattern.png');
+	border: 3px solid #000;
+	@include box-sizing(border-box);
+	padding: 1em;
+	padding-left: 2em;
+	height: 25em;
+
+	div {
+		margin-top: 4em;
+	}
+
+	h2 {
+		font-family: $font-dosis;
+		color: #000;
+		font-size: 2.9em;
+	}
+
+	.number {
+		font-family: $font-bold;
+		font-size: 8.5em;
+		text-align: center;
+		color: #000;
+	}
+
+	.name {
+		text-align: center;
+		font-family: $font-regular;
+		font-size: 3.3em;
+	}
+}
+
+@media only screen
+	and(max-width: 992px) {
+
+	.around-numbers {
+		background-image: url('../assets/img/bg/yellow-pattern.png');
+
+		.first{
+			padding-top: 6em;
+		}
+
+		.second {
+			padding-top: 8em;
+		}
+
+		.third {
+			padding-top: 8em;
+		}
+	}
+}
+
+@media only screen
+	and(max-width: 390px) {
+
+	.box {
+		font-size: 0.75em;
+
+		h2 {
+			width: 100px;
+		}
+
+		.number {
+			margin-top: -20px;
+		}
+	}
+
+}
+

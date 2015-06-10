@@ -1,6 +1,8 @@
 @import 'base';
+@import '_header.scss';
 @import '_intro.scss';
 @import '_video.scss';
+@import '_numbers.scss';
 @import '_queries-intro.scss';
 
 body {
@@ -12,67 +14,22 @@ body {
 	display: none;
 }
 
-.header{
+.footer {
 	overflow-x: auto;
 	background-image: url('../assets/img/bg/road.svg');
 	background-position: bottom;
 	background-repeat: repeat-x;
 	background-size: 3.1em;
+	height: 392px;
 }
 
-text {
+.carousel-footer {
+	width: 542px;
+	text-align: center;
+	margin-top: -222px;
+	margin-left: 468px;
 	font-family: $font-dosis;
-}
-
-.around-numbers {
-	background-image: url('../assets/img/bg/numbers-road.png'), url('../assets/img/bg/yellow-pattern.png');
-	border-bottom: 3px solid #000;
-
-	section img {
-		position: absolute;
-		margin-left: -70px;
-		margin-top: -30px;
-	}
-
-	.first {
-		padding-top: 5em;
-	}
-
-	.second {
-		padding-top: 15em;
-	}
-
-	.third {
-		padding-top: 25em;
-		padding-bottom: 4em;
-	}
-}
-
-.box {
-	background-image: url('../assets/img/bg/pattern.png');
-	border: 3px solid #000;
-	@include box-sizing(border-box);
-	padding: 10px;
-	height: 25em;
-}
-
-@media only screen
-	and(max-width: 992px) {
-
-	.around-numbers {
-		background-image: url('../assets/img/bg/yellow-pattern.png');
-
-		.first{
-			padding-top: 6em;
-		}
-
-		.second {
-			padding-top: 8em;
-		}
-
-		.third {
-			padding-top: 8em;
-		}
-	}
+	font-size: 6.6em;
+	color: #000;
 }
 
