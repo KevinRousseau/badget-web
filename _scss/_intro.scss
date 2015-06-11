@@ -69,3 +69,121 @@
 	margin-top: -33.8em;
 	margin-left: 2.5em;
 }
+
+@media only screen
+	and(max-width: 1200px) {
+
+		.around-info {
+			background-image: url('../assets/img/bg/yellow-road-md.png'),
+								url('../assets/img/bg/yellow-pattern.png');
+			height: 55em;
+			background-position: left
+		}
+
+		/*.info-text img {
+			width: 45%;
+		}*/
+}
+
+@media only screen
+	and(max-width: 992px) {
+
+	.around-info {
+		background-image: url('../assets/img/bg/yellow-road-sm.png'),
+								url('../assets/img/bg/yellow-pattern.png');
+		height: auto;
+	}
+
+	h1, p {
+		text-align: center;
+	}
+
+	.mockup {
+		padding-top: 8em;
+		padding-bottom: 6em;
+		margin-left: 150px;
+	}
+}
+
+@media only screen
+	and(max-width: 767px) {
+
+	.around-info {
+		background-image: url('../assets/img/bg/yellow-road-xs.png'),
+							url('../assets/img/bg/yellow-pattern.png');
+	}
+
+	.info-text img {
+		width: 34vw;
+		margin-left: 33vw;
+	}
+}
+
+@media only screen
+	and(max-width: 650px) {
+
+	.mockup {
+		margin-left: 100px;
+	}
+}
+
+@media only screen
+	and(max-width: 580px) {
+
+	.mockup {
+		margin-left: 70px;
+	}
+
+	.info-text img {
+		width: 40vw;
+		margin-left: 30vw;
+	}
+
+}
+
+@media only screen
+	and(max-width: 520px) {
+
+	.mockup {
+		margin-left: 40px;
+	}
+}
+
+@media only screen
+	and(max-width: 460px) {
+
+	.mockup {
+		margin-left: -10px;
+	}
+
+	.info-text img {
+		width: 50vw;
+		margin-left: 25vw;
+	}
+
+}
+
+@media only screen
+	and(max-width: 400px) {
+
+	.around-info {
+		background-image: url('../assets/img/bg/yellow-pattern.png');
+		overflow: auto;
+	}
+
+	.mockup {
+		margin-left: 0px;
+		padding-top: 400px;
+		margin-bottom: -50px;
+	}
+
+	.back-iphone {
+		display: none;
+	}
+
+	.info-text img {
+		width: 70vw;
+		margin-left: 15vw;
+	}
+}
+
