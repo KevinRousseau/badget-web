@@ -12,7 +12,7 @@ fallback.load({
 		'js/vendor/lazysizes/lazysizes.min.js'
 	],
 	Slick: [
-		'http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js',
+		//'http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js',
 		'js/vendor/slick.js/slick/slick.min.js'
 	],
 	'app.js': 'js/app.js'
