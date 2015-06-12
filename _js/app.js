@@ -3,6 +3,9 @@
 	var svgArea1 = Snap('.intro-svg');
 	var svgArea2 = Snap('.outro-svg');
 
+	var ch1 = $('.surf'),
+		ch2 = $('.balance'),
+		ch3 = $('.quiz');
 
 	function init(){
 
@@ -18,30 +21,42 @@
 
 		videoSize();
 
-		//getData();
+		getData(ch1, 1);
+		getData(ch2, 2);
+		getData(ch3, 3);
 
 	}
 
-	function getData(){
-
-		//TODO
-		//invullen aantal personen die challenge hebben gespeeld per challenge
+	function getData(element, number){
 
 		$.ajax({
-			url: "http://student.howest.be/toon.bertier/20142015/MA4/BADGET/api/challenges/1",
+			url: "http://student.howest.be/toon.bertier/20142015/MA4/BADGET/api/challenges/" + number,
 			type: 'GET',
 			dataType: 'json',
 			success: function(data){
-				console.log(data);
-			}
 
+				element.text(data.length);
+				localStorage[number] = data.length;
+
+			}
 		});
+
+		if(!navigator.onLine){
+			element.text(localStorage[number]);
+		}
 
 	}
 
 	function videoSize(){
 
-		var video = $('iframe');
+		if(navigator.onLine){
+			var video = $('iframe');
+		}else {
+			var video = $('video');
+			video.removeClass('hidden');
+			video.attr('preload', 'auto');
+			$('iframe').addClass('hidden');
+		}
 
 		var width = video.width(),
 			height = (width/16)*9;
