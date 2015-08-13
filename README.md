@@ -1,4 +1,2 @@
 # badget-web
-Onepager website about a festival app of De Lijn for Pukkelpop 2015.
-Made for Major IV - 2015
-Kevin Rousseau - 2DEV1 Toon Bertier - 2DEV1
+A responsive promotional website for the festival starter app by De Lijn. It's main purpose is to promote the app by showing a video, the data created with the app and more information. This to convince people to try it out and download the app.
